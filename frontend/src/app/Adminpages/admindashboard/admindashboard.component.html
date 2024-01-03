@@ -1,0 +1,216 @@
+<style>
+     nav {
+      position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+         background-color: #f0f0f0; 
+          line-height: 10px;
+         
+      }
+     
+  
+      .nav-item {
+          list-style: none;
+          display: inline-block;
+          margin-right: 1px; 
+        padding-top: 10px;
+          
+      }
+      .nav-left{
+        padding-top: 3px;
+        margin-left: 60px;
+        font-size: 25px;
+        font-weight: bold;
+        color: hsl(207, 89%, 45%);
+      }
+      .nav-left img {
+        width: 40px; 
+        height: auto;
+        margin-right: 18px; 
+        
+        
+    }
+
+  
+      .nav-link {
+          text-decoration: none;
+          color: #333; 
+          font-size: 17px; 
+      }
+      .nav-link.active {
+        background-color: rgba(52, 152, 219, 0.5);
+        
+    }
+  </style>
+  
+  <nav>
+    <div class="nav-left">
+      <img src="/assets/img/logo.png" alt="">
+      <a>SAVE LIVES</a>
+      </div>
+  
+      <div>
+          <ul>
+              <li class="nav-item">
+                  <a class="nav-link active" href="dashboard">Dashboard</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="Updatevaccines">Update Vaccines</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="vaccine-posted">Posted Vaccines</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="vaccineadministration">User History</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="home">Logout</a>
+              </li>
+          </ul>
+      </div>
+  </nav>
+  
+  
+    
+  <body>  
+  <h2 class="title">Admin Dashboard</h2>
+   <div class="search-container" style="margin-left:40% ;">
+        <label for="searchQuery"></label>
+        <input type="text" id="searchQuery" [(ngModel)]="searchQuery" placeholder="Enter search query">
+      </div>
+      
+      <div class="dashboard-container">
+        <h3>Users Slot</h3>
+        <div class="table-container">
+        <table class="slot-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Vaccine Name</th>
+              <th>Age</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let slot of filterSlots()">
+              <td>{{ slot.userEmail }}</td>
+              <td>{{ slot.name }}</td>
+              <td>{{ slot.vaccineName }}</td>
+              <td>{{ slot.age }}</td>
+              <td>
+                <span *ngIf="editingSlotId !== slot._id; else editSlot">{{ slot.date }}</span>
+                <ng-template #editSlot>
+                  <input [(ngModel)]="editedSlotDate" placeholder="New Date" type="date">
+                </ng-template>
+              </td>
+              <td>
+                <span *ngIf="editingSlotId !== slot._id; else editSlotTime">{{ slot.time }}</span>
+                <ng-template #editSlotTime>
+                  <input [(ngModel)]="editedSlotTime" placeholder="New Time" type="time">
+                </ng-template>
+              </td>
+              <td>
+    <!-- <button (click)="startEditingSlot(slot._id, slot.date, slot.time)" *ngIf="editingSlotId !== slot._id">Edit</button>
+    <button (click)="saveEditedSlot(slot._id)" *ngIf="editingSlotId === slot._id">Save</button>
+    <button class="cancel" (click)="cancelEditingSlot()" *ngIf="editingSlotId === slot._id">Cancel</button>
+    <button class="delete" (click)="deleteSlot(slot._id)">Delete</button>
+    <button class="complete" (click)="completeSlot(slot._id)">Complete</button> -->
+    <button (click)="startEditingSlot(slot._id, slot.date, slot.time)" *ngIf="editingSlotId !== slot._id">
+      <i class="fas fa-edit"></i> <!-- Edit icon -->
+    </button>
+    
+    <button (click)="saveEditedSlot(slot._id)" *ngIf="editingSlotId === slot._id">
+      <i class="fas fa-save"></i> <!-- Save icon -->
+    </button>
+    
+    <button class="cancel" (click)="cancelEditingSlot()" *ngIf="editingSlotId === slot._id">
+      <i class="fas fa-times"></i> <!-- Cancel icon -->
+    </button>
+    
+    <button class="delete" (click)="deleteSlot(slot._id)">
+      <i class="fas fa-trash-alt"></i> <!-- Delete icon -->
+    </button>
+    
+    <button class="complete" (click)="completeSlot(slot._id)">
+      <i class="fas fa-check"></i> <!-- Complete icon -->
+    </button>
+    
+</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+      
+      <div class="dashboard-container">
+        <h3>User Families Slots</h3>
+        <div class="table-container">
+        <table class="family-slot-table">
+          <thead>
+            <tr>
+              <th>Email</th>
+              <th>Name</th>
+              <th>Vaccine Name</th>
+              <th>Age</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let familySlot of filterFamilySlots()">
+              <td>{{ familySlot.userEmail }}</td>
+              <td>{{ familySlot.name }}</td>
+              <td>{{ familySlot.vaccine }}</td>
+              <td>{{ familySlot.age }}</td>
+              <td>
+                <span *ngIf="editingFamilySlotId !== familySlot._id; else editFamilySlot">{{ familySlot.date }}</span>
+                <ng-template #editFamilySlot>
+                  <input [(ngModel)]="editedFamilySlotDate" placeholder="New Date" type="date">
+                </ng-template>
+              </td>
+              <td>
+                <span *ngIf="editingFamilySlotId !== familySlot._id; else editFamilySlotTime">{{ familySlot.time }}</span>
+                <ng-template #editFamilySlotTime>
+                  <input [(ngModel)]="editedFamilySlotTime" placeholder="New Time" type="time">
+                </ng-template>
+              </td>
+              <td>
+                <!-- <button (click)="startEditingFamilySlot(familySlot._id, familySlot.date, familySlot.time)" *ngIf="editingFamilySlotId !== familySlot._id">Edit</button>
+                <button (click)="saveEditedFamilySlot(familySlot._id)" *ngIf="editingFamilySlotId === familySlot._id">Save</button>
+                <button class="cancel" (click)="cancelEditingFamilySlot()" *ngIf="editingFamilySlotId === familySlot._id">Cancel</button>
+                <button class="delete" (click)="deleteFamilySlot(familySlot._id)">Delete</button> -->
+                <!-- Assuming you have a familySlot object in your component -->
+<button (click)="startEditingFamilySlot(familySlot._id, familySlot.date, familySlot.time)" *ngIf="editingFamilySlotId !== familySlot._id">
+  <i class="fas fa-edit"></i> 
+</button>
+<button (click)="saveEditedFamilySlot(familySlot._id)" *ngIf="editingFamilySlotId === familySlot._id">
+  <i class="fas fa-save"></i> 
+</button>
+<button class="cancel" (click)="cancelEditingFamilySlot()" *ngIf="editingFamilySlotId === familySlot._id">
+  <i class="fas fa-times"></i> 
+</button>
+<button class="delete" (click)="deleteFamilySlot(familySlot._id)">
+  <i class="fas fa-trash-alt"></i> 
+</button>
+<button class="complete" (click)="completeFamilySlot(familySlot._id)">
+  <i class="fas fa-check"></i> 
+</button>
+
+
+                <!-- <button class="complete" (click)="completeFamilySlot(familySlot._id)">Complete</button> -->
+            </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body> 
+

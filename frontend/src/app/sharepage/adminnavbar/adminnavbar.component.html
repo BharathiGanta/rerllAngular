@@ -1,0 +1,50 @@
+<!-- navbar.component.html -->
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light" *ngIf="isadminnavbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" routerLink="">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-amd"
+          viewBox="0 0 16 16">
+          <path
+            d="m.334 0 4.358 4.359h7.15v7.15l4.358 4.358V0H.334ZM.2 9.72l4.487-4.488v6.281h6.28L6.48 16H.2V9.72Z" />
+        </svg>
+        <span class="fw-bold fs-4">&nbsp; SAVE LIVES</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="available-vaccine" routerLinkActive="active-link">AvailableVaccine</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="Bookvaccineslot" routerLinkActive="active-link">BookVaccine</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="userbookedslot" routerLinkActive="active-link">MySlot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="familybookedslot" routerLinkActive="active-link">FamiliesBookedSlot</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="vaccinehistory" routerLinkActive="active-link">Vaccine History</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="userprofile" routerLinkActive="active-link">Profile</a>
+          </li>
+  
+          <li class="nav-item">
+            <a class="nav-link" routerLink="home" routerLinkActive="active-link">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+   
+
+
+
+

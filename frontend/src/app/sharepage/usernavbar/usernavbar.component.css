@@ -1,0 +1,64 @@
+
+
+
+
+  
+  .navbar {
+    background-color: #3498db;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    line-height:10px;
+  }
+  
+  .navbar-brand {
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  .navbar-toggler-icon {
+    background-color: yellow;
+  }
+  
+  .navbar-nav .nav-link {
+    color: black;
+    font-size: 1rem;
+  }
+  .image{
+    width: 40px; 
+    height: auto;
+    margin-right: 18px; 
+   
+    
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: black;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-nav {
+      background-color: #333;
+    }
+  
+    .navbar-nav .nav-link {
+      color: #ffffff;
+    }
+  }
+ 
+.nav-link.active-link {
+  color: #004080; 
+  background-color: #cce5ff; 
+  
+}
+.nav-left{
+  color: hsl(207, 89%, 45%);
+}
+
+  
+  
+  
+  

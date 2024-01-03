@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  
+</head>
+
+<body>
+  <div class="container">
+    <h2>Login</h2>
+    <form (ngSubmit)="onSubmit()" class="login-form">
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="userData.email" required>
+
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="userData.password" required>
+
+      </div>
+
+      <div class="form-group">
+        <label for="captcha">Enter the below code: </label>
+        <input type="text" id="captcha" name="captcha" [(ngModel)]="userData.captcha" required>
+        <span *ngIf="showCaptcha" class="captcha-text">{{ generatedCaptcha }}</span>
+        <button type="button" (click)="generateCaptcha()" class="captcha-button">Generate Captcha</button>
+      </div>
+
+      <button type="submit" class="login-button">Login</button>
+      <br><a routerLink="/userresetpass">Forgot Password?</a>
+
+      <ng-container *ngIf="loginSuccess; else noRedirect">
+        <script>
+
+          localStorage.setItem('loggedInUser', JSON.stringify(userData));
+
+          
+        </script>
+      </ng-container>
+
+      <ng-template #noRedirect></ng-template>
+
+    </form>
+  </div>
+
+</body>
+
+</html>
+

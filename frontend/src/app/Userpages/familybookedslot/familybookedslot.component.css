@@ -1,0 +1,115 @@
+body {
+  height: 100%;
+  overflow: hidden;
+  /* overflow-y: auto; */
+  
+  
+}
+body{
+  background-image: url('/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0%;
+
+}
+
+table {
+  width: 800px;
+  border-collapse: collapse;
+color: black;
+ margin-left: 350px;
+ 
+ background-color: rgba(243, 236, 236, 0.5);
+}
+
+th,
+td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+.body{
+  margin-top: 100px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+
+.button-container {
+  text-align: center;
+  font-size: 90%;
+}
+
+
+button {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  padding: 6px 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #2980b9;
+}
+
+button.save-btn {
+  background-color: #2ecc71;
+  margin-right: 10px;
+}
+
+button.save-btn:hover {
+  background-color: #27ae60;
+  align-items: left;
+}
+
+button.cancel-btn {
+  background-color: #27ae60;
+}
+
+button.cancel-btn:hover {
+  background-color: #27ae60;
+}
+
+button.re-btn {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 6px 10px;
+  margin-right: 8px;
+}
+
+button.del-btn {
+  background-color: #c0392b;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 6px 10px;
+
+
+}
+
+.body {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  height: 100vh;
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  
+
+}

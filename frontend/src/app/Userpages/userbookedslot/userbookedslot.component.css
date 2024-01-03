@@ -1,0 +1,93 @@
+body {
+  height: 100%;
+  background-image: url('/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  
+}
+
+.formContainer {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 150px;
+  width: 800px;
+  margin-left: 360px;
+  background-color: rgba(243, 236, 236, 0.5);
+
+}
+label{
+  font-weight: bold;
+  color: black;
+}
+
+.row {
+  display: flex;
+  align-items: left;
+  margin-bottom: 10px;
+
+}
+.containerStyle {
+  overflow: hidden;
+}
+
+.row label {
+  width: 100px;
+  font-weight: bold;
+  text-align: left;
+}
+
+.row div,
+.row input {
+  flex: 1;
+}
+
+.buttonContainer {
+  margin-top: 20px;
+}
+
+.rescheduleButton,
+.deleteButton,
+.saveButton,
+.cancelButton {
+  margin: 5px;
+  padding: 6px;
+  cursor: pointer;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 300px;
+}
+
+.deleteButton {
+  background-color: #c0392b;
+}
+
+.saveButton,
+.cancelButton {
+  width: 200px;
+
+
+}
+input{
+  padding: 5px;
+}
+
+.body {
+  display: flex;
+  margin-top: 200px;
+  justify-content: center;
+  height: 100vh;
+  font-weight: bold;
+  font-size: larger;
+  color: white;
+  
+
+}

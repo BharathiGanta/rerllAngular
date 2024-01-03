@@ -1,0 +1,84 @@
+/* styles.css */
+body {
+  height: 100%;
+  background-image: url('/assets/img/admin.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.container {
+  width: 600px;
+ 
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  
+}
+
+.vaccine-form-container {
+  text-align: center; /* Align text to the left */
+  text-align: left;
+ 
+}
+
+ h2 {
+  color: white;
+  margin-bottom: 15px;
+  font-weight: bold;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.vaccine-form-container div {
+  margin-bottom: 15px;
+}
+
+.vaccine-form-container label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+}
+
+.vaccine-form-input {
+  width: calc(100% - 16px); /* Full width input minus padding and box-sizing */
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+
+}
+
+
+.add-vaccine-button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-left: 103px;
+  margin-top: 20px;
+  width: 350px;
+}
+
+.add-vaccine-button:hover {
+  background-color: #45a049;
+}
+label{
+  margin-left: 100px;
+  
+}
+input{
+  padding: 5px;
+}
+
+

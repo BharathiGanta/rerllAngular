@@ -1,0 +1,124 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title></title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <style>
+    .nav-tabs {
+      background: linear-gradient(to right, #3498db, #2c3e50);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .nav-tabs .nav-item .nav-link {
+      color: white;
+      border: none;
+      border-radius: 0;
+      margin-right: 10px;
+      transition: background 0.3s ease;
+    }
+
+    .nav-tabs .nav-item .nav-link:hover {
+      background-color: #2c3e50;
+    }
+
+    .nav-tabs .nav-item .nav-link.active {
+      background-color: #2c3e50;
+      border: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <ul class="nav nav-tabs" id="myTabs">
+      <li class="nav-item">
+        <a class="nav-link " id="onlinevaccine" data-toggle="tab" href="Bookvaccineslot">Book Vaccine Slot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="postedJobsTab" data-toggle="tab" href="available-vaccine">Available Vaccines</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="postJobTab" data-toggle="tab" href="userbookedslot">Booked Slot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active " id="postJobTab" data-toggle="tab" href="familybookedslot">Families Booked Slot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="postJobTab" data-toggle="tab" href="vaccinehistory">Vaccine History</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " id="postJobTab" data-toggle="tab" href="userprofile">User Profile</a>
+    </li>
+      <li class="nav-item">
+        <a class="nav-link" id="logoutTab" href="">Logout</a>
+      </li>
+
+    </ul> -->
+   
+<body>
+    <div *ngIf="bookedSlots.length === 0; else tableContent">
+      <p class="body">No booked slot found for your family members </p>
+    </div>
+   
+    
+    <ng-template #tableContent>
+     
+      <h2 style="text-align: center; color: white; margin-bottom: 20px; margin-top:100px">Family Members Slot</h2>
+      <table >
+       
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Vaccine</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <ng-container *ngFor="let slot of bookedSlots; let i = index">
+            <tr *ngIf="!editingSlotId || editingSlotId !== slot.id; else editMode">
+              <!-- Display mode -->
+              <td>{{ slot.id }}</td>
+              <td>{{ slot.name }}</td>
+              <td>{{ slot.age }}</td>
+              <td>{{ slot.vaccine }}</td>
+              <td>{{ slot.date }}</td>
+              <td>{{ slot.time }}</td>
+              <td>
+                <button (click)="handleReschedule(slot.id)" class="button-container re-btn">Reschedule</button>
+                <button (click)="handleDelete(slot.id)" class="button-container del-btn">Delete</button>
+              </td>
+            </tr>
+    
+            <ng-template #editMode>
+              <!-- Edit mode -->
+              <tr>
+                <td>{{ editedSlots[i].id }}</td>
+                <td>{{ editedSlots[i].name }}</td>
+                <td>{{ editedSlots[i].age }}</td>
+                <td>{{ editedSlots[i].vaccine }}</td>
+                <!-- Allow editing for Date and Time -->
+                <td><input type="date" [(ngModel)]="editedSlots[i].date" name="date" /></td>
+                <td><input type="time" [(ngModel)]="editedSlots[i].time" name="time" /></td>
+                <td>
+                  <button (click)="handleSaveReschedule(i)" class="save-btn button-container">Save</button>
+                  <button (click)="handleCancelReschedule(i)" class="cancel-btn button-container">Cancel</button>
+                </td>
+              </tr>
+            </ng-template>
+          </ng-container>
+        </tbody>
+      </table>
+      
+    </ng-template>
+  </body>

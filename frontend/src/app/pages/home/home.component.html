@@ -1,0 +1,89 @@
+<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+<div class="banner">
+  <div class="slider-container">
+    <div *ngFor="let image of sliderImages; let index = index" class="slider-image" [class.active]="index === activeIndex">
+      <img [src]="image" [alt]="'Slide ' + (index + 1)" />
+    </div>
+  </div>
+</div>
+<div class="container mt-5 mb-5">
+  <h1 class="text-center">Why Should We take &nbsp;<span class="highlight">Vaccine?</span></h1>
+  <div class="row mt-5">
+    <!-- one  -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>1</h1>
+        <p>Boosts our Immune System</p>
+      </div>
+    </div>
+    <!-- two -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>2</h1>
+        <p>Prevents from many fatal diseases.</p>
+      </div>
+    </div>
+    <!-- three  -->
+    <div class="col-lg-4 mt-2">
+      <div class="stepBox">
+        <h1>3</h1>
+        <p> stimulates your body's natural defenses</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4 mb-4">
+  <h1 class="text-center">Take Your First Step to Get&nbsp;<span class="highlight">Vaccinated</span></h1>
+  <div class="row">
+    <div class="col-lg-3 mt-3">
+      <div class="companybox">
+        <img src="/assets/img/covid-19-vaccine.jpg" />
+        <h1>Covid-19</h1>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mt-3">
+      <div class="companybox">
+        <img src="/assets/img/fluvaccine.png" />
+        <h1>Influenza Virus</h1>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mt-3">
+      <div class="companybox">
+        <img src="/assets/img/polio-vaccine.jpg" />
+        <h1>Polio</h1>
+      </div>
+    </div>
+
+    <div class="col-lg-3 mt-3">
+      <div class="companybox">
+        <img src="/assets/img/whooping-cough.jpg" />
+        <h1>Whooping-Cough</h1>
+      </div>
+    </div>
+  </div>
+  <a routerLink="/home/userlogin" class="viewmorebtn">click here to book vaccine slot<i class="bi bi-arrow-right"></i></a>
+</div>
+
+<div _ngcontent-ng-c75484632="" class="container-fluid footer mt-5">
+  <div _ngcontent-ng-c75484632="" class="row"><div _ngcontent-ng-c75484632="" class="col-lg-6 mt-3 mb-3">
+    <h1 _ngcontent-ng-c75484632="" style="font-weight: bold;
+    color: #fff;
+    font-size: 20px;">SAVE LIVES</h1><p _ngcontent-ng-c75484632="" style="color: #fff;
+font-size: 12px;">“It's important to be vaccinated and have the opportunity to become Healthier.”</p>
+  </div><div _ngcontent-ng-c75484632="" class="col-lg-4 mt-3 mb-3">
+    <a  _ngcontent-ng-c75484632="" routerlink="" ng-reflect-router-link="" href="/" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;">Home</a>
+    <a _ngcontent-ng-c75484632="" routerlink="about" ng-reflect-router-link="about" href="/about" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;">About</a>
+    <a _ngcontent-ng-c75484632="" routerlink="contact" ng-reflect-router-link="contact" href="/contact" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;">Contact</a>
+    <a _ngcontent-ng-c75484632="" routerlink="privacy" ng-reflect-router-link="privacy" href="/" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;">Privacy &amp; policy</a>
+  </div>
+  <div _ngcontent-ng-c75484632="" class="col-lg-2 mt-3 mb-3" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;"><a _ngcontent-ng-c75484632="" href="#" target="_blank">
+    <i _ngcontent-ng-c75484632="" class="bi bi-facebook" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;"></i></a><a _ngcontent-ng-c75484632="" href="#" target="_blank">
+      <i _ngcontent-ng-c75484632="" class="bi bi-whatsapp" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;"></i></a><a _ngcontent-ng-c75484632="" href="#" target="_blank">
+        <i _ngcontent-ng-c75484632="" class="bi bi-instagram" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;"></i></a><a _ngcontent-ng-c75484632="" href="#" target="_blank">
+          <i _ngcontent-ng-c75484632="" class="bi bi-youtube" style=" color: #fff; text-decoration: none; padding: 0px 10px; font-size: 17px;"></i></a>
+        </div>
+      </div>
+    </div>

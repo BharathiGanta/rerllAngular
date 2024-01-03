@@ -1,0 +1,116 @@
+<style>
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+      background-color: #f0f0f0; 
+       line-height: 10px;
+      
+   }
+  
+
+   .nav-item {
+       list-style: none;
+       display: inline-block;
+       margin-right: 1px; 
+     padding-top: 10px;
+       
+   }
+   .nav-left{
+     padding-top: 3px;
+     margin-left: 60px;
+     font-size: 25px;
+     font-weight: bold;
+     color: hsl(207, 89%, 45%);
+   }
+   .nav-left img {
+     width: 40px; 
+     height: auto;
+     margin-right: 18px; 
+     
+     
+ }
+
+
+   .nav-link {
+       text-decoration: none;
+       color: #333; 
+       font-size: 17px; 
+   }
+   .nav-link.active {
+     background-color: rgba(52, 152, 219, 0.5);
+     /* Add any additional styling for the active link */
+ }
+</style>
+
+<nav>
+ <div class="nav-left">
+   <img src="/assets/img/logo.png" alt="">
+   <a>SAVE LIVES</a>
+   </div>
+
+   <div>
+       <ul>
+           <li class="nav-item">
+               <a class="nav-link " href="dashboard">Dashboard</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link active" href="Updatevaccines">Update Vaccines</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" href="vaccine-posted">Posted Vaccines</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link " href="vaccineadministration">User History</a>
+           </li>
+           <li class="nav-item">
+               <a class="nav-link" href="home">Logout</a>
+           </li>
+       </ul>
+   </div>
+</nav>
+     
+
+        
+<body><h2>Add Vaccine</h2>
+  <div class="container">
+    
+    <div class="vaccine-form-container">
+     
+      <div>
+       <label> Vaccine Name:
+        <input style="margin-left: 50px; width: 196px;"
+         type="text" placeholder="Vaccine Name" [(ngModel)]="vaccineName"  />
+        </label>
+      </div>
+      <div>
+        <label>Start Date:
+        <input style="margin-left: 80px; width: 198px;"
+          class="date"  type="date" [(ngModel)]="startDate" />
+        </label>
+      </div>
+      <div>
+        <label>End Date:
+        <input style="margin-left: 85px; width: 200px;"
+         class="date" type="date" [(ngModel)]="endDate" />
+        </label>
+      </div>
+      <div>
+        <label>Place of Vaccination:
+        <input style="margin-left: 8px; width: 201px;"
+         class="place" type="text" placeholder="Place of Vaccination" [(ngModel)]="vaccinationPlace" /> 
+        </label>
+      </div>
+      <div class="error-message">{{ error }}</div>
+      <div>
+        <button (click)="handleAddVaccine()" class="add-vaccine-button">
+          Add Vaccine
+        </button>
+      </div>
+    </div>
+  </div>
+</body>

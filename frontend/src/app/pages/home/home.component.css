@@ -1,0 +1,150 @@
+.banner {
+    display: flex;
+    flex-direction: column;
+    margin-top:60px;
+  }
+  
+  .slider-container {
+    overflow: hidden;
+    position: relative;
+    height: 600px;
+    
+  }
+  .slider-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    transition: opacity 1s ease-in-out;
+  }
+  .slider-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+  
+  .active {
+    display: block;
+    opacity: 1;
+  }
+  
+  
+.content
+{
+    position: absolute;
+}
+.content h1 
+{
+    margin-top: 80px;
+    color: #000000;
+    font-size: 60px;
+    font-weight: bold;
+    font-family: 'Roboto';
+}
+.content h3
+{
+    margin-top: 0px;
+    margin-left: 800px;
+    color: #000000;
+    font-size: 40px;
+    font-weight: bold;
+    
+  
+}
+
+.content h4
+{
+    margin-top: 0px;
+    margin-left: 500px;
+    margin-right: 20px;
+    color: #000000;
+    font-size: 20px;
+    text-align: justify;
+    font-weight: bold;
+    
+  
+}
+.content a
+{
+    text-decoration: none;
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    margin-left: 900px;
+    padding: 15px 20px;
+    border-radius: 5px;
+}
+
+.content a:hover 
+{
+    background-color: black;
+    color: #fff;
+}
+
+
+.stepBox 
+{
+    background-color: #000;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+.stepBox h1 
+{
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(22, 165, 158);
+}
+.stepBox p 
+{
+    font-size: 20px;
+    font-style: italic;
+    color: #fff;
+}
+.highlight
+{
+    color: rgb(22, 165, 158);
+    font-weight: bold;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.companybox {
+    padding: 10px 5px;
+  }
+  
+  .companybox img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .companybox h1 {
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  
+  .viewmorebtn {
+    text-decoration: none;
+    background-color: rgb(22, 165, 158);
+    color: #000;
+    padding: 10px 10px;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  .footer
+{
+    overflow: hidden;
+    position: sticky;
+    top: 100%;
+    background-color:#000;
+    padding: 20px 10px;
+}
+  
+  
+
+
+  
+  
+

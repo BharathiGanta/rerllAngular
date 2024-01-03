@@ -1,0 +1,95 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Job Posting Form</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <style>
+        .nav-tabs {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .nav-tabs .nav-item .nav-link {
+            color: white;
+            border: none;
+            border-radius: 0;
+            margin-right: 10px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-tabs .nav-item .nav-link:hover {
+            background-color: #2c3e50;
+        }
+
+        .nav-tabs .nav-item .nav-link.active {
+            background-color: #2c3e50;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <ul class="nav nav-tabs" id="myTabs">
+            <li class="nav-item">
+                <a class="nav-link " id="postJobTab" data-toggle="tab" href="Bookvaccineslot">Book Vaccine Slot</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" id="postedJobsTab" data-toggle="tab" href="available-vaccine">Available
+                    Vaccines</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="postJobTab" data-toggle="tab" href="userbookedslot">Booked Slot</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="postJobTab" data-toggle="tab" href="familybookedslot">Families Booked Slot</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="postJobTab" data-toggle="tab" href="vaccinehistory">Vaccine History</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " id="postJobTab" data-toggle="tab" href="userprofile">User Profile</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="logoutTab" href="">Logout</a>
+            </li>
+        </ul> -->
+<body>
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 10px; color:white;   margin-top:60px">Available Vaccine</h2>
+
+            <div class="search-container">
+                <label for="searchInput"></label>
+                <input type="text" id="searchInput" [(ngModel)]="searchText" placeholder="Search by entering city or vaccine name">
+            </div>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="table-header">Name</th>
+                            <th class="table-header">Start Date</th>
+                            <th class="table-header">End Date</th>
+                            <th class="table-header">Place of Vaccination</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let vaccine of filteredVaccines(); trackBy: trackById">
+                            <td class="table-cell">{{ vaccine.name }}</td>
+                            <td class="table-cell">{{ vaccine.startDate }}</td>
+                            <td class="table-cell">{{ vaccine.endDate }}</td>
+                            <td class="table-cell">{{ vaccine.placeOfVaccination }}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+    

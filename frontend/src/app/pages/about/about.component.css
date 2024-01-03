@@ -1,0 +1,68 @@
+html, body {
+    height: 400%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/assets/img/about.jfif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+}
+
+.container {
+    height: 100%;
+}
+
+h2,
+h3 {
+    font-weight: bold;
+    font-family: 'Bona Nova';
+    color: #04172b;
+}
+
+p {
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.vaccine-card {
+    font-family: 'Bona Nova';
+    font-weight: bold;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.vaccine-card h3 {
+    color: #4caf50;
+}
+
+.vaccine-card p {
+    line-height: 1.6;
+    color: #555;
+}
+
+.vaccine-card h4 {
+    font-weight: bold;
+    margin-top: 10px;
+    color: #4caf50;
+}
+
+.vaccine-card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.vaccine-card li {
+    font-family: Poppins;
+    margin-bottom: 5px;
+}

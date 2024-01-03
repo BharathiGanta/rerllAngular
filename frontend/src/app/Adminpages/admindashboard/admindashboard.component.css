@@ -1,0 +1,131 @@
+/* @import "~@fortawesome/fontawesome-free/css/all.min.css"; */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+
+
+body {
+  height: 100%;
+  
+    background-image: url('/assets/img/admin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    
+   
+  
+}
+
+.dashboard-container {
+    margin-bottom: 20px;
+  }
+  .table-container, h3 {
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 80%; /* Adjust the max-width as needed */
+    margin: auto; /* Center the table container */
+  }
+  .slot-table,
+  .family-slot-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    
+  }
+  
+  
+  .slot-table th,
+  .slot-table td,
+  .family-slot-table th,
+  .family-slot-table td {
+    border: 1px solid grey;
+    padding: 8px;
+    text-align: center;
+  }
+  
+  .slot-table th,
+  .family-slot-table th {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+  }
+  
+  .slot-table td input,
+  .family-slot-table td input {
+    width: 100%;
+    padding: 5px;
+    
+  }
+  
+  .slot-table td button,
+  .family-slot-table td button {
+    margin-right: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    transition-duration: 0.4s;
+  }
+  
+  .slot-table td button.delete,
+  .family-slot-table td button.delete,
+  .slot-table td button.cancel,
+  .family-slot-table td button.cancel {
+    background-color: #ff4d4d;
+    border: 1px solid #ff3333;
+  }
+  
+  .slot-table td button.delete:hover,
+  .family-slot-table td button.delete:hover,
+  .slot-table td button.cancel:hover,
+  .family-slot-table td button.cancel:hover {
+    background-color: #ff3333; 
+    color: white;
+    border: 1px solid #ff1a1a;
+  }
+
+.search-container {
+    margin-bottom: 20px;
+   
+
+    
+  }
+  
+  #searchQuery {
+    padding: 4px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    text-align: center;
+    width: 400px;
+    margin-left: -50px;
+  }
+  .title{
+    margin-top: 70px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+  }
+  h3{
+    text-align: center;
+    background-color: rgba(230, 230, 250, 0.5);
+    
+  }
+  tbody{
+    background-color: rgba(255, 255, 255, 0.8);
+    
+  }
+
+ 
+
+  
+  

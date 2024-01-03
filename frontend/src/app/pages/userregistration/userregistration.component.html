@@ -1,0 +1,57 @@
+<body><div class="registration-container">
+  <div class="registration-form">
+    <h2>Registration Form</h2>
+
+    <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" [(ngModel)]="userData.username" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="userData.email" required
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+        <div
+          *ngIf="registrationForm.controls['email'].invalid && (registrationForm.controls['email'].dirty || registrationForm.controls['email'].touched)"
+          class="error-message">
+          <div *ngIf="registrationForm.controls['email'].errors?.['pattern']">Invalid email format.</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" [(ngModel)]="userData.password" required minlength="8">
+        <div
+          *ngIf="registrationForm.controls['password'].invalid && (registrationForm.controls['password'].dirty || registrationForm.controls['password'].touched)"
+          class="error-message">
+          <div *ngIf="registrationForm.controls['password'].errors?.['minlength']">Password should be at least 8
+            characters long.</div>
+        </div>
+      </div>
+
+      <label for="email">security questions:</label>
+      <div class="form-group">
+        <label for="securityQuestion1">{{ userData.securityQuestion1 }}</label>
+        <input type="text" id="securityAnswer1" name="securityAnswer1" [(ngModel)]="userData.securityAnswer1" required>
+      </div>
+
+      <div class="form-group">
+        <label for="securityQuestion2">{{ userData.securityQuestion2 }}</label>
+        <input type="text" id="securityAnswer2" name="securityAnswer2" [(ngModel)]="userData.securityAnswer2" required>
+      </div>
+
+      <button type="submit" [disabled]="!registrationForm.valid">Register</button>
+    </form>
+    <br>
+    <p>Already have an account?&nbsp;&nbsp;<a routerLink="/userlogin">Click here</a></p>
+    <ng-container *ngIf="registrationSuccess; else noRedirect">
+      <script>
+        window.location.href = '/userlogin';
+      </script>
+    </ng-container>
+
+    <ng-template #noRedirect></ng-template>
+  </div>
+</div>
+</body>

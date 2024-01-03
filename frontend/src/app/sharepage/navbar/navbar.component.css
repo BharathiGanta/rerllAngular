@@ -1,0 +1,60 @@
+
+
+
+
+  
+  .navbar {
+    background-color: #3498db;
+    padding: 4px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    
+  }
+  .image{
+    width: 40px; /* Adjust the width of the logo as needed */
+    height: auto;
+    margin-right: 18px; 
+  }
+  
+  .navbar-brand {
+    color: black;
+    font-size: 1.5rem;
+    line-height: 1;
+  }
+  
+  
+  
+  .navbar-nav .nav-link {
+    color: black;
+    font-size: 1rem;
+  }
+  
+  .navbar-nav .nav-link:hover {
+    color: black;
+  }
+  
+  @media (max-width: 767px) {
+    .navbar-nav {
+      background-color: white;
+    }
+  
+    .navbar-nav .nav-link {
+      color: black;
+    }
+  }
+  .nav-link.active-link {
+    color: #004080; 
+    background-color: #cce5ff; 
+    
+  }
+  
+  .active-link {
+    color: #ff0000;
+  }
+
+  .nav-left{
+    color: hsl(207, 89%, 45%);
+  }
+  

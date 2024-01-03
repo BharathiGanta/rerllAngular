@@ -1,0 +1,74 @@
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
+  body {
+    height: 100%;
+    background-image: url('/assets/img/admin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+  }
+  .table-container {
+    overflow-x: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 2px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  th {
+    border: 1px solid grey;
+    padding: 12px;
+    background-color: #3498db;
+    color: white;
+    text-align: left;
+   font-weight: bold;
+    font-size: 18px;
+  }
+  
+  td {
+    border: 1px solid grey;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+    
+  }
+ 
+  .delete-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff4d4d;
+  }
+  h2{
+    margin-top: 70px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+  }
+  tbody{
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+  th, td{
+    text-align: center;
+  }
+ 
+ 

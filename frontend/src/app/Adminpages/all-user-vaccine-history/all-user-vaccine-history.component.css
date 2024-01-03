@@ -1,0 +1,78 @@
+body {
+  height: 100%;
+  
+    background-image: url('/assets/img/admin.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    overflow-y: auto;
+    
+   
+  
+}
+    .table-container {
+      overflow-x: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    
+    h2 {
+      color: white;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 40px;
+      
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+   
+
+    }
+    
+    thead {
+      background-color: #3498db;
+      color: white;
+      font-size: 18px;
+    }
+    
+    th, td {
+      border: 1px solid grey;
+      padding: 15px;
+      text-align: center;
+    }
+    
+    tr {
+      transition: background-color 0.3s ease;
+      
+    }
+    
+   
+    
+    .search-container {
+      text-align: center;
+      
+    }
+    #searchInput{
+      text-align: center;
+      padding: 4px;
+      border-radius: 2px;
+      width: 400px;
+      border: none;
+    }
+    
+    
+    td{
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    
+    
+    
+    
+    

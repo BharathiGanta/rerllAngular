@@ -1,0 +1,86 @@
+body {
+  overflow: hidden;
+  background-image: url('/assets/img/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.user-profile-container {
+  display: flex;
+  flex-direction: column;
+  width: 600px; /* Adjust as needed */
+  margin: auto;
+  margin-top: 100px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  background-color: rgba(243, 236, 236, 0.5); /* Adjust the opacity as needed */
+  padding-left: 60px;
+}
+
+.form-row {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 100px;
+}
+
+label {
+  margin-right: 10px;
+  min-width: 120px; 
+}
+label, span{
+  color: black;
+  
+}
+
+
+input{
+  width: 178px;
+
+}
+select{
+  width: 179px;
+}
+
+h2 {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+  margin-left: -60px;
+  font-weight: bold;
+  
+}
+
+.save,
+.edit,
+.cancel {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+.save {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 20px;
+  width: 300px;
+}
+
+.edit {
+  background-color: #4caf50;
+  color: white;
+  margin-top: 10px;
+  margin-left: -120px;
+  width: 300px;
+}
+
+.cancel {
+  background-color: #c0392b;
+  color: white;
+  margin-top: 10px;
+  width: 300px;
+}

@@ -1,0 +1,44 @@
+<!-- contact-page.component.html -->
+<div class="contact-page">
+
+    <div class="slider-container">
+      <div *ngFor="let image of sliderImages; let index = index" class="slider-image" [class.active]="index === activeIndex">
+        <img [src]="image" [alt]="'Slide ' + (index + 1)" />
+      </div>
+    </div>
+  
+  
+    <div class="contact-details">
+      <h2>Contact Information</h2>
+      <table>
+        <tbody>
+          <tr>
+            <td>Email:</td>
+            <td>
+              <a href="mailto:savelife@organization.com">savelivesorganization.com</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Phone:</td>
+            <td>
+              <a href="tel:8754129865">8754129865</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Address:</td>
+            <td>Save Lives Organization's Main Office Address</td>
+          </tr>
+        </tbody>
+      </table>
+  
+    
+      <h2>For Any Queries</h2>
+      
+  
+      
+      <h2>Help Desk</h2>
+      <h3>If you need further assistance, please contact our help desk:</h3>
+      <p>Email: <a href="mailto:helpdesk@savelifeganization.com"> helpdesksavelivesorganization.com </a></p>
+      <p>Phone: <a href="tel:9856327854">9856327854</a></p>
+    </div>
+  </div>
