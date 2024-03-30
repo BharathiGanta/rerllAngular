@@ -12,7 +12,7 @@ export class FamilyMembersBookingComponent {
   familyMembers: any[] = [];
   userEmail: string = '';
   vaccines: any[] = [];
-  editedSlots: any[] = [];
+  editedSlots: any[] = [];      
   bookedSlots: any[] = [];
   availableVaccines: string[] = [];
 
@@ -93,7 +93,7 @@ export class FamilyMembersBookingComponent {
   bookSlot() {
     // Validate the form data before attempting to book
     if (this.validateFormData()) {
-      this.familyMembersBookingService.bookSlot(this.familyMembers).subscribe(
+      this.familyMembersBookingService.bookSlot(this.familyMembers).subscribe(  //handling asynchronous response 
         () => {
           console.log('Slots booked successfully');
           alert('Slots booked successfully');
